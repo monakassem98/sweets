@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color-one: #FFBF00;
+    --color-two: #ECCA9C;
+    --color-three: #8C6A5D;
+    --color-four: #FF204E;
+    --color-five: #5F374B;
+}
+
+.container {
+    width: 70%;
+}
+
+
+
+
+p {
+    font-family: "Caveat", cursive;
+    color: #5F374B;
+}
+
+/* wave styling  */
+.wave {
+    --size: 50px;
+    --R: calc(var(--size)*1.28);
+
+    -webkit-mask:
+        radial-gradient(var(--R) at 50% calc(1.8*var(--size)), #000 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+        radial-gradient(var(--R) at 50% calc(-.8*var(--size)), #0000 99%, #000 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+    background: #ECCA9C;
+    height: 88.5vh;
+    margin-top: 5px;
+
+}
+
+/* ############# */
+
+/* start header section  */
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto -20px auto;
+}
+
+header .bars {
+    display: none;
+    color: #8C6A5D;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .links {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .links a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #8C6A5D;
+    padding: 10px 20px;
+}
+
+.active {
+    background-color: var(--color-four);
+    color: white !important;
+    border-radius: 18px;
+}
+
+
+header .links a:hover {
+    background-color: #FF204E;
+    color: white;
+    border-radius: 18px;
+}
+
+header .icons {
+    width: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70px;
+}
+
+header .icons .bag {
+    color: #FFBF00;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    header .links {
+        display: none;
+    }
+
+    header .bars {
+        display: block;
+    }
+
+    header .icons .bag {
+        color: #8C6A5D;
+    }
+}
+
+/* end header section  */
+
+/* ###################### */
+
+/* start hero section  */
+
+.hero-section {
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70%;
+}
+
+/* start left section  */
+.hero-section .left-section img {
+    width: 400px;
+    animation-name: spin;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* spinning image  */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-section .left-section img:hover {
+    animation-name: none;
+}
+
+/* start right section  */
+.hero-section .right-section h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #FF204E;
+}
+
+.hero-section .right-section p {
+    font-size: 30px;
+}
+
+/* end hero section  */
+
+
+.btn {
+    position: absolute;
+    z-index: 1000;
+    bottom: 30px;
+    left: 45%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #5F374B;
+    border: none;
+    background-color: #FFBF00;
+    border-radius: 24px;
+    padding: 10px 20px;
+    font-family: "Pacifico";
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #FF204E;
+    color: #ECCA9C;
+}
+
+
+/* start media queries  */
+
+@media (max-width: 1168px) {
+    .hero-section .left-section img {
+        width: 350px;
+    }
+
+    .hero-section .right-section h1 {
+        font-size: 40px;
+    }
+
+    .hero-section .right-section p {
+        font-size: 22px;
+    }
+
+    button {
+        left: 45%;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .hero-section .left-section img {
+        width: 300px;
+    }
+
+    .hero-section .right-section h1 {
+        font-size: 35px;
+    }
+
+    .hero-section .right-section p {
+        font-size: 20px;
+    }
+
+    button {
+        left: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .hero-section .left-section img {
+        width: 200px;
+    }
+
+    .hero-section .right-section h1 {
+        font-size: 30px;
+    }
+
+    .hero-section .right-section p {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 5px 10px;
+        bottom: 40px;
+        left: 40%;
+    }
+}

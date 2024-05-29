@@ -1,0 +1,223 @@
+body {
+    margin: 0;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --color-one: #FFBF00;
+    --color-two: #ECCA9C;
+    --color-three: #8C6A5D;
+    --color-four: #FF204E;
+    --color-five: #5F374B;
+}
+
+.container {
+    width: 70%;
+}
+
+/* wave styling  */
+.wave {
+    --size: 50px;
+    --R: calc(var(--size)*1.28);
+
+    -webkit-mask:
+        radial-gradient(var(--R) at 50% calc(1.8*var(--size)), #000 99%, #0000 101%) calc(50% - 2*var(--size)) 0/calc(4*var(--size)) 100%,
+        radial-gradient(var(--R) at 50% calc(-.8*var(--size)), #0000 99%, #000 101%) 50% var(--size)/calc(4*var(--size)) 100% repeat-x;
+    background: #ECCA9C;
+    height: calc(100vh + 20px);
+    margin-top: 5px;
+
+}
+
+/* ############# */
+
+/* start header section  */
+header {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto -20px auto;
+}
+
+header .bars {
+    display: none;
+    color: #8C6A5D;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .logo img {
+    width: 50px;
+}
+
+header .links {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header .links a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #8C6A5D;
+    padding: 10px 20px;
+}
+
+.active {
+    background-color: var(--color-four);
+    color: white !important;
+    border-radius: 18px;
+}
+
+
+header .links a:hover {
+    background-color: #FF204E;
+    color: white;
+    border-radius: 18px;
+}
+
+header .icons {
+    width: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 70px;
+}
+
+header .icons .bag {
+    color: #FFBF00;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    header .links {
+        display: none;
+    }
+
+    header .bars {
+        display: block;
+    }
+
+    header .icons .bag {
+        color: #8C6A5D;
+    }
+}
+
+/* end header section  */
+
+/* hero section  */
+.hero-section {
+    position: absolute;
+    top: 20%;
+    z-index: 1000;
+    text-align: center;
+    transform: translate(20%, 0%);
+}
+
+.hero-section h1 {
+    font-size: 50px;
+    opacity: 0.6;
+    margin-bottom: -45px;
+    margin-top: 10px;
+    padding: 0;
+    color: var(--color-five);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-section h3 {
+    font-size: 25px;
+    color: var(--color-four);
+    margin-top: 15px;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-family: "Caveat", cursive;
+    color: #5F374B;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.cake {
+    width: 130px;
+    position: absolute;
+    top: 64%;
+    left: 100%;
+}
+
+.jelly {
+    width: 115px;
+    position: absolute;
+    left: -15%;
+    top: 25%;
+}
+
+.dough {
+    width: 150px;
+    position: absolute;
+    transform: rotate(-5deg);
+    left: 0%;
+    top: 50%;
+
+}
+
+.cup {
+    width: 95px;
+    position: absolute;
+    transform: translate(50%, 50%);
+    left: 105%;
+    top: 25%;
+    transform: rotate(20deg);
+}
+
+@media (max-width: 905px) {
+    .cup {
+        left: 100%;
+    }
+
+    .cake {
+        width: 120px;
+        top: 77%;
+        left: 98%;
+    }
+
+    .jelly {
+        display: none;
+    }
+}
+
+@media (max-width: 710px) {
+    .hero-section h1 {
+        font-size: 40px;
+    }
+
+    .cup {
+        display: none;
+    }
+
+    .cake {
+        display: none;
+    }
+
+    .dough {
+        display: none;
+    }
+    .wave{
+        height: calc(100vh + 120px);
+    }
+}
+
+@media (max-width: 599px){
+    .wave{
+        height: calc(100vh + 400px);
+
+    }
+}

@@ -1,0 +1,78 @@
+
+.container {
+    height: fit-content;
+    background-color: var(--color-two);
+    padding-bottom: 50px;
+}
+
+
+/* start hero section  */
+
+.hero-section {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* start left section  */
+.hero-section .left-section img {
+    width: 400px;
+    animation-name: spin;
+    animation-duration: 100s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+/* spinning image  */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-section .left-section img:hover {
+    animation-name: none;
+}
+
+/* start right section  */
+.hero-section .right-section h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #FF204E;
+}
+
+.hero-section .right-section p {
+    font-size: 30px;
+    font-family: "Caveat", cursive;
+    color: var(--color-five);
+}
+
+/* end hero section  */
+
+
+
+.btn {
+    display: block;
+    cursor: pointer;
+    font-size: 20px;
+    color: #5F374B;
+    border: none;
+    background-color: #FFBF00;
+    border-radius: 24px;
+    padding: 10px 20px;
+    font-family: "Pacifico";
+    text-decoration: none;
+    margin: auto;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #FF204E;
+    color: white;
+}
